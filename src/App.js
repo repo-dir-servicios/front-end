@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Reset } from 'styled-reset'
+
 import './App.scss'
 
 import Button from "./components/elements/Button";
@@ -17,14 +19,17 @@ function App() {
   return (
     <div className="App">
       
+      <Reset/>
+
       <main className="Main">
+        {/* 
         <Home/>
         <Categories/>
-        <Login/>    
+        <Login/>     */}
         <Providers/>
-        <Services/>
+        {/* <Services/>
         <Profile/>
-        <Register/>
+        <Register/> */}
 
       </main>
 
