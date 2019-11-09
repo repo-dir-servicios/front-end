@@ -9,10 +9,13 @@ import Button from "./components/elements/Button";
 import FooterMain from "./components/general/FooterMain/FooterMain"
 import Home from './components/sections/Home/Home';
 import Categories from './components/sections/Categories/Categories';
-import Category from './components/sections/Categories/Category/Category';
+import CategoryDetail from './components/sections/Categories/CategoryDetail/CategoryDetail';
 import Login from './components/sections/Login/Login';
 import Providers from './components/sections/Providers/Providers';
+
 import Services from './components/sections/Services/Services';
+import ServiceDetail from './components/sections/Services/ServiceDetail/ServiceDetail';
+
 import Profile from './components/sections/Profile/Profile';
 import Register from './components/sections/Register/Register';
 
@@ -35,18 +38,21 @@ function App() {
             
             <Route exact path="/" component={Home}/>
             
-            {/* <Route exact path="/categories" component={Categories}/>
-            <Route exact path="/categories/:id" component={Category}/>
+            <Route exact path="/categories" component={Categories}/>
+            <Route exact path="/categories/:id" component={CategoryDetail}/>
             
-            <Route exact path="/login" component={Login}/> */}
+            <Route exact path="/login" component={Login}/>
             
             <Route exact path="/providers" component={Providers}/>
             <Route exact path="/providers/:id" component={ProviderDetail}/>
             
-            {/* <Route exact path="/services" component={Services}/>
+            <Route exact path="/services" component={Services}/>
+          
+            <Route exact path="/services/:id" component={ServiceDetail}/>
             
             <Route exact path="/profile" component={Profile}/>
-            <Route exact path="/register" component={Register}/> */}
+            <Route exact path="/register" component={Register}/>
+          
             
             <Route exact path="*" component={NotFound}/>
 

@@ -10,8 +10,8 @@ const CategorySection = styled.section`
 
 const CategoryView = () => (
 
-    <CategorySection className="Category">
-        Category
+    <CategorySection className="CategoryDetail">
+        CategoryDetail
     </CategorySection>
 
 )
