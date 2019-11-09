@@ -8,10 +8,12 @@ const ProviderDetailSection = styled.section`
 
 `
 
-const ProviderDetailView = () => (
+const ProviderDetailView = ({
+    id
+}) => (
 
     <ProviderDetailSection className="ProviderDetail">
-        ProviderDetail
+        ProviderDetail { id }
     </ProviderDetailSection>
 
 )

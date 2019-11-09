@@ -17,30 +17,33 @@ const MenuList = styled.ul`
     * {
         color: #fff;
     }
+    .active {
+        font-weight: bold;
+    }
 `
 
 const Menu = () => (
     <MenuNav>
         <MenuList>
-            <NavLink to="/home">
+            <NavLink exact to="/">
                 home
             </NavLink>
-            <NavLink to="/categories">
+            <NavLink exact to="/categories">
                 categories
             </NavLink>
-            <NavLink to="/login">
+            <NavLink exact to="/login">
                 login
             </NavLink>
-            <NavLink to="/providers">
+            <NavLink exact to="/providers">
                 providers
             </NavLink>
-            <NavLink to="/services">
+            <NavLink exact to="/services">
                 services
             </NavLink>
-            <NavLink to="/profile">
+            <NavLink exact to="/profile">
                 profile
             </NavLink>
-            <NavLink to="/register">
+            <NavLink exact to="/register">
                 register
             </NavLink>
         </MenuList>
