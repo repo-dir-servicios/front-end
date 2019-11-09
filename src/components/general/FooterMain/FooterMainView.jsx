@@ -1,6 +1,8 @@
+import React from 'react'
 import styled from 'styled-components'
 
-import React from 'react'
+import Menu from "../Menu/Menu"
+
 
 const Footer = styled.footer`
     
@@ -21,7 +23,7 @@ const Footer = styled.footer`
 const FooterMainView = () => (
 
     <Footer className="FooterMain">
-        FooterMain
+        <Menu/>
     </Footer>
 
 )

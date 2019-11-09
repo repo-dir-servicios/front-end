@@ -15,27 +15,32 @@ import Services from './components/sections/Services/Services';
 import Profile from './components/sections/Profile/Profile';
 import Register from './components/sections/Register/Register';
 
+
+import { BrowserRouter } from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-      
-      <Reset/>
+    <BrowserRouter>
+      <div className="App">
+        
+        <Reset/>
 
-      <main className="Main">
-        {/* 
-        <Home/>
-        <Categories/>
-        <Login/>     */}
-        <Providers/>
-        {/* <Services/>
-        <Profile/>
-        <Register/> */}
+        <main className="Main">
+          
+          <Home/>
+          <Categories/>
+          <Login/>
+          <Providers/>
+          <Services/>
+          <Profile/>
+          <Register/>
 
-      </main>
+        </main>
 
-      <FooterMain/>
+        <FooterMain/>
 
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
