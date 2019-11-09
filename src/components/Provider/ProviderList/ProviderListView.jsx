@@ -3,17 +3,23 @@ import styled from 'styled-components'
 import React from 'react'
 import ProviderPreview from '../ProviderPreview/ProviderPreview';
 
-const ProviderListView = () => (
+const ProviderListView = ({
+    providers
+}) => {
 
-    <ul>
-        <ProviderPreview/>        
-        <ProviderPreview/>        
-        <ProviderPreview/>        
-        <ProviderPreview/>        
-        <ProviderPreview/>        
-        <ProviderPreview/>        
-    </ul>
+    const renderProviders = providers.map(provider=>(
+        <ProviderPreview
+            key={`provider_${provider.id}`}
+            provider={provider}
+        />        
+    ))
+    return (
 
-)
+        <ul>
+            { renderProviders }                
+        </ul>
+    
+    )
+}
 
 export default ProviderListView;

@@ -4,14 +4,29 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 
-// TODO: borrar id falso
-const id = Math.ceil(Math.random()*100)
 
-const ProviderPreviewView = () => (
+const ProviderPreviewView = ({
+    id,
+    first_name,
+    last_name,
+    category
+}) => (
 
     <article className="ProviderPreview">
         <Link to={`/providers/${id}`}>
-            ProviderPreview
+            <header>
+                <span>
+                    { first_name }
+                </span>
+                <span>
+                    { last_name }
+                </span>
+            </header>
+            <footer>
+                <small>
+                    { category }
+                </small>
+            </footer>
         </Link>
     </article>
 

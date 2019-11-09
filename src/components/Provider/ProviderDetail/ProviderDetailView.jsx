@@ -9,12 +9,34 @@ const ProviderDetailSection = styled.section`
 `
 
 const ProviderDetailView = ({
-    id
+    id,
+    first_name,
+    last_name,
+    category,
+    description
 }) => (
 
-    <ProviderDetailSection className="ProviderDetail">
-        ProviderDetail { id }
-    </ProviderDetailSection>
+    <article className="ProviderDetail">
+        <header>
+            <h1>
+                <span>
+                    { first_name }
+                </span>
+                &nbsp;
+                <span>
+                    { last_name }
+                </span>
+                
+            </h1>
+            
+            <h2>
+                { category }
+            </h2>
+        </header>
+        <p>
+            { description }
+        </p>
+    </article>
 
 )
 
