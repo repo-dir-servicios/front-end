@@ -22,7 +22,42 @@ const RegisterView = () => (
         </p>
 
         <form action="" onSubmit={e=>e.preventDefault()}>
-            <input type="text"/>
+            <label>
+                <span>
+                    username
+                </span>
+                <input type="text" name="username"/>
+            </label>
+            <label>
+                <span>
+                    first_names
+                </span>
+                <input type="text" name="first_names"/>
+            </label>
+            <label>
+                <span>
+                    last_names
+                </span>
+                <input type="text" name="last_names"/>
+            </label>
+            <label>
+                <span>
+                    phone
+                </span>
+                <input type="text" name="phone"/>
+            </label>
+            <label>
+                <span>
+                    address
+                </span>
+                <input type="text" name="address"/>
+            </label>
+            <label>
+                <span>
+                    profile_picture
+                </span>
+                <input type="text" name="profile_picture"/>
+            </label>
             <input type="submit"/>
         </form>
     </RegisterSection>

@@ -22,6 +22,14 @@ h5 {font-size: 1.25em;}
 
 small, .text_small {font-size: 0.8em;}
 
+main > * > 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    text-align: center;
+}
 
 p {
     margin-bottom: 1.5rem;
