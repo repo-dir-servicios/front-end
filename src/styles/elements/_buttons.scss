@@ -9,4 +9,14 @@ input[type=submit] {
     background-color: $color_primary;
     color: $color_primary_on;
     border: none;
+    
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+
+    transition: all 0.4s;
+    
+    &:hover,
+    &:focus {
+        background-color: $color_primary_highlight;
+
+    }
 }
