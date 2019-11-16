@@ -4,6 +4,13 @@ import React from 'react'
 import UserDashboardView from './UserDashboardView';
 
 
+import requestsFake from "../../data/fake/requestsFake"; 
+import contractsFake from "../../data/fake/contractsFake" 
+
+import UserMessage from  "../general/UserMessage/UserMessage";
+
+
+
 class UserDashboard extends React.Component {
 
 
@@ -11,9 +18,25 @@ class UserDashboard extends React.Component {
     }
 
 
+    componentDidMount = () => {
+        setTimeout( () => {
+
+            this.setState({
+                requests: requestsFake,
+                contracts: contractsFake,
+            })
+            
+        },2000)
+    }
+
 
     render() {
-        return <UserDashboardView/>
+        return (
+            !! this.state.requests ?
+            <UserDashboardView {...this.state}/>
+            :
+            <UserMessage title="Cargando" message="..."/>
+        )
     }
 
 }

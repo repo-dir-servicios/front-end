@@ -4,47 +4,44 @@ import React from 'react'
 import RequestPreview from '../Requests/RequestPreview/RequestPreview';
 import ContractPreview from '../Contracts/ContractPreview/ContractPreview';
 
-const UserDashboardSection = styled.section`
-    
-    
 
-`
+import style from "./UserDashboard.scss";
+import UserDashboardSection from './UserDashboardSection';
 
-const serviceFake = {
-    name: "Instalación de equipo de videovigilancia",
-}
 
-const clientFake = {
-    first_names: "Josué Pedro",
-    last_names: "Ramirez Ramirez",
-}
+const UserDashboardView = ({
+    requests,
+    contracts
+}) => {
 
-const UserDashboardView = () => (
 
-    <UserDashboardSection className="UserDashboard">
-        <section>
-            <h3>
-                Nuevas Solicitudes
-            </h3>
+    const renderRequests = requests.map((r,index)=>(
+        <RequestPreview {...r} key={`request_preview_${index}`}/>
+    ))
+    const renderContracts = contracts.map((c,index)=>(
+        <ContractPreview {...c} key={`contract_preview_${index}`}/>
+    ))
 
-            <ul>
-                <RequestPreview service={serviceFake} client={clientFake}/>
-                <RequestPreview service={serviceFake} client={clientFake}/>
-                <RequestPreview service={serviceFake} client={clientFake}/>
-            </ul>
+    return (
+
+        <section className="UserDashboard">
+            
+            <UserDashboardSection
+                title="Nuevas Solicitudes"
+                list={renderRequests}
+                number={requests.length}
+            />
+
+
+            <UserDashboardSection
+                title="Proximos Contratos"
+                list={renderContracts}
+                number={contracts.length}
+            />
+            
         </section>
-        <section>
-            <h3>
-                Próximos Contratos
-            </h3>
-            <ul>
-                <ContractPreview service={serviceFake} client={clientFake}/>
-                <ContractPreview service={serviceFake} client={clientFake}/>
-                <ContractPreview service={serviceFake} client={clientFake}/>
-            </ul>
-        </section>
-    </UserDashboardSection>
-
-)
+    
+    )
+}
 
 export default UserDashboardView;

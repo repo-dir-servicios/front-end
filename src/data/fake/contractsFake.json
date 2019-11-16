@@ -1,0 +1,24 @@
+[
+    {
+        "service": {
+            "name": "Mantenimiento de equipo de videovigilancia"
+        },
+        "client": {
+            "first_names": "Josué Pedro",
+            "last_names": "Ramirez Ramirez"
+        },
+        "start_date": "2019-12-1T19:45:26+0000",
+        "end_date": "2019-12-1T19:45:26+0000"
+    },
+    {
+        "service": {
+            "name": "Arreglar reja eléctrica"
+        },
+        "client": {
+            "first_names": "Josué Pedro",
+            "last_names": "Ramirez Ramirez"
+        },
+        "start_date": "2019-12-2T19:45:26+0000",
+        "end_date": "2019-12-2T19:45:26+0000"
+    }
+]

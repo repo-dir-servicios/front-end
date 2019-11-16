@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+
+.UserDashboard {
+    
+    &>section {
+        margin: 0;
+        padding: 1rem;
+        height: calc( 50vh - 1.5rem );
+
+        &>header {
+            padding: 1rem 0;
+            display: flex;
+            h3 {
+                flex-grow: 1;
+            }
+
+            .Number {
+                font-size: 2rem;
+            }
+        }
+        h3 {
+            margin: 0;
+        }
+
+        ul {
+            padding: 1rem;
+            height: 30vh;
+            overflow: auto;
+            margin: 0;
+        }
+
+
+        &:nth-child(even) {
+            background-color: $color_neutral;
+        }
+        &:nth-child(odd) {
+            background-color: $color_neutral_light;
+        }
+    }
+}

@@ -10,7 +10,7 @@ const UserMessage = ({
     color,
     navigateAction
 }) => (
-    <section className="UserMessage" style={{color}}>
+    <section className="UserMessage" style={color?{color}:{color:"#888"}}>
         <h2>
             { title }
         </h2>

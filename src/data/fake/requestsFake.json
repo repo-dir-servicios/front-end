@@ -1,0 +1,35 @@
+[
+    {
+        "service": {
+            "name": "Instalación de equipo de videovigilancia"
+        },
+        "client": {
+            "first_names": "Josué Pedro",
+            "last_names": "Ramirez Ramirez"
+        },
+        "start_date": "2019-12-1T19:45:26+0000",
+        "end_date": "2019-12-1T19:45:26+0000"
+    },
+    {
+        "service": {
+            "name": "Instalación eléctrica"
+        },
+        "client": {
+            "first_names": "Josué Pedro",
+            "last_names": "Ramirez Ramirez"
+        },
+        "start_date": "2019-12-2T19:45:26+0000",
+        "end_date": "2019-12-2T19:45:26+0000"
+    },
+    {
+        "service": {
+            "name": "Revisión de tierra física"
+        },
+        "client": {
+            "first_names": "Josué Pedro",
+            "last_names": "Ramirez Ramirez"
+        },
+        "start_date": "2019-12-16T19:45:26+0000",
+        "end_date": "2019-12-16T19:45:26+0000"
+    }
+]
