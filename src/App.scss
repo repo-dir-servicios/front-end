@@ -1,12 +1,19 @@
+@import "./styles/variables";
+@import "./styles/elements/elements";
+@import "./styles/elements/forms";
+
+* {
+    box-sizing: border-box;
+}
+
 .App {
-    background-color: #ddd;
-    // main {
+    main {
 
-    //     background-color: #fa0;
+        padding: 2rem 1rem;
 
-    //     height: 80vh;
+        height: 80vh;
 
-    // }
+    }
 
     // &>footer {
 

@@ -1,0 +1,12 @@
+@import "../../styles/variables";
+
+
+
+button,
+input[type=submit] {
+    width: auto;
+    padding: .5rem 1rem;
+    background-color: $color_primary;
+    color: $color_primary_on;
+    border: none;
+}
