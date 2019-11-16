@@ -1,0 +1,22 @@
+@import "../../../styles/variables";
+
+
+.UserMessage {
+    
+    width: 100%;
+    height: calc( 100vh - 7rem );
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 4rem;
+
+    outline: 1px solid #ccc;
+
+    color: $color_primary_on;
+
+}

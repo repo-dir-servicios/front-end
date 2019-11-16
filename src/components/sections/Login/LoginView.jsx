@@ -8,12 +8,51 @@ const LoginSection = styled.section`
 
 `
 
-const LoginView = () => (
 
-    <LoginSection className="Login">
-        Login
-    </LoginSection>
 
-)
+
+const LoginView = (props) =>  {
+
+    const {
+        username,
+        password,
+        inputChange,
+        formSubmit,
+        fields
+    } = props;
+
+    const renderFields = fields.map((f,index)=>(
+        <label key={ `input_${f.name}_${index}`}>
+            <span>
+                {f.label}
+            </span>
+            <input
+                type={f.type}
+                name={f.name}
+                value={ props[f.name] }
+                onChange={e=>inputChange(f.name, e.target.value)}
+            />
+        </label>
+    ))
+
+    return (
+
+        <LoginSection className="Login">
+                
+            <h1>Login</h1>
+            
+            <form action="" onSubmit={e=>formSubmit(e)}>
+                
+                { renderFields }
+                                
+                <input type="submit"/>
+
+            </form>
+            
+        </LoginSection>
+
+    )
+}
+
 
 export default LoginView;

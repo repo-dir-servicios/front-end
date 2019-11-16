@@ -2,66 +2,65 @@ import styled from 'styled-components'
 
 import React from 'react'
 
+import { content } from "../../../data/content/register"
+
 const RegisterSection = styled.section`
     
     
 
 `
 
-const RegisterView = () => (
 
-    <RegisterSection className="Register">
-        
-        <h1>Registro</h1>
-        
-        <p>
-            Ullamco aliquip in consectetur commodo sit esse exercitation non excepteur sit veniam voluptate reprehenderit mollit. Dolor amet aute exercitation ad eiusmod aliqua duis laborum amet cillum veniam et ex officia. 
-        </p>
-        <p>
-            Lorem commodo excepteur do et labore sunt. Fugiat aliquip reprehenderit sit labore sint pariatur ipsum officia.
-        </p>
 
-        <form action="" onSubmit={e=>e.preventDefault()}>
-            <label>
-                <span>
-                    username
-                </span>
-                <input type="text" name="username"/>
-            </label>
-            <label>
-                <span>
-                    first_names
-                </span>
-                <input type="text" name="first_names"/>
-            </label>
-            <label>
-                <span>
-                    last_names
-                </span>
-                <input type="text" name="last_names"/>
-            </label>
-            <label>
-                <span>
-                    phone
-                </span>
-                <input type="text" name="phone"/>
-            </label>
-            <label>
-                <span>
-                    address
-                </span>
-                <input type="text" name="address"/>
-            </label>
-            <label>
-                <span>
-                    profile_picture
-                </span>
-                <input type="text" name="profile_picture"/>
-            </label>
-            <input type="submit"/>
-        </form>
-    </RegisterSection>
 
-)
+const RegisterView = (props) =>  {
+
+    const {
+        username,
+        first_names,
+        last_names,
+        phone,
+        address,
+        profile_picture,
+        inputChange,
+        formSubmit,
+        fields
+    } = props;
+
+    const renderFields = fields.map((f,index)=>(
+        <label key={ `input_${f.name}_${index}`}>
+            <span>
+                {f.label}
+            </span>
+            <input
+                type={f.type}
+                name={f.name}
+                value={ props[f.name] }
+                onChange={e=>inputChange(f.name, e.target.value)}
+            />
+        </label>
+    ))
+
+    return (
+
+        <RegisterSection className="Register">
+                
+            <h1>Registro</h1>
+            
+            <section dangerouslySetInnerHTML={{__html: content }}/>
+
+            <form action="" onSubmit={e=>formSubmit(e)}>
+                
+                { renderFields }
+                                
+                <input type="submit"/>
+
+            </form>
+            
+        </RegisterSection>
+
+    )
+}
+
 
 export default RegisterView;
