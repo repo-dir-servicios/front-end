@@ -7,6 +7,8 @@ import UserMessage from './../../general/UserMessage/UserMessage';
 
 import fields from "../../../data/forms/request-form-fields"
 
+import services from "../../../data/fake/servicesFake"
+
 class RequestForm extends React.Component {
 
 
@@ -14,6 +16,20 @@ class RequestForm extends React.Component {
         username: "nombreusuario",
         current_state: 0,
         redirect: false,
+        servicesData: [
+            {
+                id: null,
+                units: null
+            },
+            {
+                id: null,
+                units: null
+            },
+            {
+                id: null,
+                units: null
+            },
+        ],
         data: {}
     }
 
@@ -92,15 +108,55 @@ class RequestForm extends React.Component {
     }
 
 
-    updateService = (service,units) => {
-        const totalUnits = units > 0 ? units : service.minimum_units;
+    updateService = (service,units,index) => {
         
-        const totalPrice = parseInt(totalUnits) * parseInt(service.price_per_unit);
+        if( !! service ) {
 
-        this.setState({
-            totalPrice
-        })
-        
+            
+            const servicesData = this.state.servicesData
+
+            let chosenService = servicesData[index]
+            
+            if( !! chosenService ) {
+
+                const totalUnits = units > 0 ? units : service.minimum_units;
+
+                chosenService.id = service.id
+                
+                chosenService.units = totalUnits
+
+            }
+
+            
+
+            let totalPrice = 0
+            
+            for( let serviceData of servicesData ) {
+                                
+                // let serviceData = services[sI]
+
+                if( !!  serviceData.units && ! serviceData.units.isNaN ) {
+                    
+                    const servicePrice = parseInt(serviceData.units) * parseInt(
+                        services.find(s=>s.id==serviceData.id).price_per_unit
+                    );
+                    
+                    totalPrice += servicePrice;
+
+                }
+            }
+
+            this.setState({
+                services,
+                totalPrice
+            })
+            
+        } else {
+            this.setState({
+                totalPrice: null
+            })
+
+        }
     }
     
 
@@ -141,6 +197,9 @@ class RequestForm extends React.Component {
 
                 return <RequestFormView
                     {...this.state}
+                    
+                    services={this.state.servicesData}     
+
                     inputChange={this.inputChange}            
                     formSubmit={this.formSubmit}
                     fields={fields}     

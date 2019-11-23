@@ -10,7 +10,7 @@ import services from '../data/fake/servicesFake'
 
 
 const RenderFieldList = (
-    list,props,inputChange, data, updateService
+    list,props,inputChange, data, updateService, dfIndex
 ) => list.map((f,index)=>(
     <label key={ `input_${f.name}_${index}`}>
         <span>
@@ -20,7 +20,11 @@ const RenderFieldList = (
         {
             f.type === "service_form"
             ?
-            <ServiceForm {...data} updateService={updateService}/>
+            <ServiceForm
+                {...data}
+                updateService={updateService}
+                index={dfIndex}
+            />
             :
             <input
                 type={f.type}

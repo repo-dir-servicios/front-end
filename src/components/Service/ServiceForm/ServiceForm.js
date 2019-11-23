@@ -42,7 +42,6 @@ class ServiceForm extends React.Component {
     }
 
     async componentDidUpdate(){
-        console.log(this.props);
         
         if( !! this.props.providerId ) {
             
@@ -71,18 +70,33 @@ class ServiceForm extends React.Component {
 
     serviceSelect = e => {
         const id = e.target.value
-        const selected = services.find(s=>s.id==id);
-
-        this.setState({
-            selected,
-            units: null
-        })
+        let selected
+        
+        
+        if( !! id && id != "" ) {
+            
+            selected = services.find(s=>s.id==id);
+            
+            this.setState({
+                selected,
+                units: null
+            })
+            
+            
+        } else {
+            
+            this.setState({
+                selected: null,
+                units: null
+            })
+        }
+        
 
         this.props.updateService(
             selected,
-            null
+            null,
+            this.props.index
         );
-        
     }
 
 
@@ -96,7 +110,8 @@ class ServiceForm extends React.Component {
         if( !! this.props.updateService ) {
             this.props.updateService(
                 this.state.selected,
-                units
+                units,
+                this.props.index
             );
     
         }

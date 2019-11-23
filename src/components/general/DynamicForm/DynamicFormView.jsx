@@ -2,11 +2,11 @@ import styled from 'styled-components'
 
 import React from 'react'
 
-import DynamicForm from '../../general/DynamicForm/DynamicForm';
+import renderFieldList from '../../../functions/renderFieldList'
 
 
 
-const RequestFormSection = styled.section`
+const DynamicFormSection = styled.section`
     
     form>header {
         width: 100%;
@@ -26,7 +26,7 @@ const RequestFormSection = styled.section`
 
 
 
-const RequestFormView = (props) =>  {
+const DynamicFormView = (props) =>  {
 
     const {
         services,
@@ -41,22 +41,12 @@ const RequestFormView = (props) =>  {
     } = props;
 
 
-    const formProps = {
-
-        fields,
-        props,
-        inputChange,
-        data,
-        updateService,
-        
-    }
-
 
     return (
 
-        <RequestFormSection className="RequestForm">
+        <DynamicFormSection className="DynamicForm">
                 
-            <h1>RequestForm</h1>
+            <h1>DynamicForm</h1>
             
             <form action="" onSubmit={e=>formSubmit(e)}>
                 
@@ -66,13 +56,7 @@ const RequestFormView = (props) =>  {
                 </header>
                 
                 {
-                    services.map((s,i)=>(
-                        <DynamicForm
-                        key={"df_"+i}
-                        {...formProps}
-                        i={i}
-                        />
-                    ))
+                    services.map(s=>(s,i)=>(<>{renderFields(i)()}</>))
                 }
 
                                 
@@ -80,10 +64,10 @@ const RequestFormView = (props) =>  {
 
             </form>
             
-        </RequestFormSection>
+        </DynamicFormSection>
 
     )
 }
 
 
-export default RequestFormView;
+export default DynamicFormView;
