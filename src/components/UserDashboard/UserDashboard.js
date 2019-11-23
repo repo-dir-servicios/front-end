@@ -117,8 +117,6 @@ class UserDashboard extends React.Component {
         
         const data = {
             contracts: this.state.contracts.filter(c=>(
-                c.status!=="accepted"
-                &&
                 c.status!=="canceled"
             )),
             requests: this.state.requests.filter(r=>(
