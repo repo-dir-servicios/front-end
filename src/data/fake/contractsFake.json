@@ -1,5 +1,6 @@
 [
     {
+        "id": 0,
         "service": {
             "name": "Mantenimiento de equipo de videovigilancia"
         },
@@ -11,6 +12,7 @@
         "end_date": "2019-12-1T19:45:26+0000"
     },
     {
+        "id": 1,
         "service": {
             "name": "Arreglar reja eléctrica"
         },

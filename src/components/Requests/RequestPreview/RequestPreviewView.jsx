@@ -17,6 +17,10 @@ const RequestPreviewView = ({
     end_date,
     payment_method,
     comments,
+
+    // actions
+    accept,
+    cancel,
 }) => (
 
     <article className="RequestPreview">
@@ -52,11 +56,11 @@ const RequestPreviewView = ({
                     </button>
                 </Link>
 
-                <button>
+                <button onClick={accept}>
                     Aceptar
                 </button>
 
-                <button>
+                <button onClick={cancel}>
                     No aceptar
                 </button>
 

@@ -11,15 +11,30 @@ import UserDashboardSection from './UserDashboardSection';
 
 const UserDashboardView = ({
     requests,
-    contracts
+    contracts,
+
+    // actions:
+    requestAccept,
+    requestCancel,
+
+    contractCancel,
+
 }) => {
-
-
-    const renderRequests = requests.map((r,index)=>(
-        <RequestPreview {...r} key={`request_preview_${index}`}/>
+    
+    const renderRequests = requests
+    .map((r,index)=>(
+        <RequestPreview
+            {...r}
+            key={`request_preview_${index}`}
+            accept={()=>requestAccept(r.id)}
+            cancel={()=>requestCancel(r.id)}
+        />
     ))
     const renderContracts = contracts.map((c,index)=>(
-        <ContractPreview {...c} key={`contract_preview_${index}`}/>
+        <ContractPreview
+            {...c} key={`contract_preview_${index}`}
+            cancel={()=>contractCancel(c.id)}
+        />
     ))
 
     return (

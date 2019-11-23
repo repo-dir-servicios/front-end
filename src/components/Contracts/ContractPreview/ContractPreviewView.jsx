@@ -17,6 +17,10 @@ const ContractPreviewView = ({
     end_date,
     payment_method,
     comments,
+
+    // actions
+    cancel
+
 }) => (
 
     <article className="ContractPreview">
@@ -54,7 +58,7 @@ const ContractPreviewView = ({
 
                 
 
-                <button>
+                <button onClick={()=>cancel(id)}>
                     Cancelar
                 </button>
 
