@@ -2,3 +2,13 @@ a {
     color: #000;
     text-decoration: none;
 }
+
+
+dl {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    &>* {
+        width: 50%;
+    }
+}

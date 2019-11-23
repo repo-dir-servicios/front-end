@@ -1,6 +1,8 @@
+import React from 'react'
+import {Link} from 'react-router-dom'
+
 import styled from 'styled-components'
 
-import React from 'react'
 
 const ProviderDetailSection = styled.section`
     
@@ -36,7 +38,17 @@ const ProviderDetailView = ({
         <p>
             { description }
         </p>
+
+        <footer>
+            <Link to={`/provider/${id}/new-request`}>
+                <button>
+                    Solicitar un servicio
+                </button>
+            </Link>
+        </footer>
+
     </article>
+
 
 )
 

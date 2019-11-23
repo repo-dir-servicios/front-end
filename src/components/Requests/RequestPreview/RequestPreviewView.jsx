@@ -64,6 +64,10 @@ const RequestPreviewView = ({
                     No aceptar
                 </button>
 
+                <button onClick={()=>console.log("responder")}>
+                    Responder
+                </button>
+
             </footer>
     </article>
 

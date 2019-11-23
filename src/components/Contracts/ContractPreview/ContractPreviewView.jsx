@@ -50,7 +50,7 @@ const ContractPreviewView = ({
             </header>
 
             <footer>
-                <Link to={`/requests/${id}`}>
+                <Link to={`/contracts/${id}`}>
                     <button>
                         Ver
                     </button>

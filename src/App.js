@@ -24,6 +24,9 @@ import NotFound from './components/NotFound/NotFound';
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ProviderDetail from './components/Provider/ProviderDetail/ProviderDetail';
+import ContractDetail from './components/Contracts/ContractDetail/ContractDetail';
+import RequestDetail from './components/Requests/RequestDetail/RequestDetail';
+import RequestForm from './components/Requests/RequestForm/RequestForm';
 
 function App() {
   return (
@@ -46,6 +49,7 @@ function App() {
             <Route exact path="/providers" component={Providers}/>
             <Route exact path="/providers/:id" component={ProviderDetail}/>
             
+            
             <Route exact path="/services" component={Services}/>
           
             <Route exact path="/services/:id" component={ServiceDetail}/>
@@ -54,6 +58,14 @@ function App() {
             <Route exact path="/register" component={Register}/>
           
             
+            {/* <Route exact path="/requests" component={Providers}/> */}
+            <Route exact path="/provider/:id/new-request" component={RequestForm}/>
+            <Route exact path="/requests/:id" component={RequestDetail}/>
+            
+            {/* <Route exact path="/contracts" component={Providers}/> */}
+            <Route exact path="/contracts/:id" component={ContractDetail}/>
+
+
             <Route exact path="*" component={NotFound}/>
 
           </Switch>

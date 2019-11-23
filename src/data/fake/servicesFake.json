@@ -1,0 +1,102 @@
+[
+    {
+        "id": 0,
+        "name": "Recolección de basura",
+        
+        "description": "Veniam incididunt aliqua enim excepteur enim. Aute enim in consequat aliqua esse. Anim labore do voluptate do nisi deserunt. Incididunt magna magna ullamco ut excepteur. Veniam et enim aute amet exercitation irure.",
+        "service_unit": "kg",
+        "price_per_unit": "10",
+        "featured_image": "http://fakeimg.pl/300x200",
+        "images": [
+            "http://fakeimg.pl/300x200",
+            "http://fakeimg.pl/300x200",
+            "http://fakeimg.pl/300x200"
+        ],
+        "minimum_units": "10",
+        "categories": [0],
+        "comments": [
+            0,
+            2
+        ],
+        "reviews": [
+            0,
+            1
+        ]
+        
+    },
+    {
+        "id": 1,
+        "name": "Construcción o reparación de mobiliario",
+        
+        "description": "Eu eu fugiat amet aliquip occaecat Lorem do id et. Ea sit amet nisi do aute dolor laboris est ullamco exercitation aliqua ea. Aute elit reprehenderit elit labore elit ad non aliquip commodo ut. Officia aliqua eu elit dolor laborum irure velit mollit. Officia ipsum fugiat elit sint quis proident exercitation qui. Ex reprehenderit occaecat nulla aliquip excepteur proident Lorem tempor officia officia nulla non voluptate deserunt. Sint tempor voluptate magna sunt cillum do mollit duis cupidatat eu Lorem irure.",
+        "service_unit": "hr",
+        "price_per_unit": "300",
+        "featured_image": "http://fakeimg.pl/300x200",
+        "images": [
+            "http://fakeimg.pl/300x200",
+            "http://fakeimg.pl/300x200",
+            "http://fakeimg.pl/300x200"
+        ],
+        "minimum_units": "4",
+        "categories": [0],
+        "comments": [
+            1,
+            2
+        ],
+        "reviews": [
+            0,
+            2
+        ]
+        
+    },
+    {
+        "id": 2,
+        "name": "Planchado de ropa",
+        
+        "description": "Do aute commodo culpa nulla cupidatat ut labore commodo laborum sint esse ad velit. Cillum officia aute pariatur labore. Mollit veniam ex minim non dolore cupidatat id minim ex. Ad commodo aliquip laboris voluptate cillum ea Lorem qui Lorem nulla. Adipisicing nisi veniam ex in duis culpa cillum voluptate non excepteur velit do nostrud exercitation. Voluptate sunt duis est elit et anim ipsum deserunt dolor eiusmod culpa sint tempor officia. Sunt anim ut labore minim dolor nostrud consequat est proident id.",
+        "service_unit": "pieza",
+        "price_per_unit": "50",
+        "featured_image": "http://fakeimg.pl/300x200",
+        "images": [
+            "http://fakeimg.pl/300x200",
+            "http://fakeimg.pl/300x200",
+            "http://fakeimg.pl/300x200"
+        ],
+        "minimum_units": "3",
+        "categories": [0],
+        "comments": [
+            0,
+            1
+        ],
+        "reviews": [
+            1,
+            2
+        ]
+        
+    },
+    {
+        "id": 3,
+        "name": "Limpieza de ventanas",
+        
+        "description": "Do aute commodo culpa nulla cupidatat ut labore commodo laborum sint esse ad velit. Cillum officia aute pariatur labore. Mollit veniam ex minim non dolore cupidatat id minim ex. Ad commodo aliquip laboris voluptate cillum ea Lorem qui Lorem nulla. Adipisicing nisi veniam ex in duis culpa cillum voluptate non excepteur velit do nostrud exercitation. Voluptate sunt duis est elit et anim ipsum deserunt dolor eiusmod culpa sint tempor officia. Sunt anim ut labore minim dolor nostrud consequat est proident id.",
+        "service_unit": "m2",
+        "price_per_unit": "15",
+        "featured_image": "http://fakeimg.pl/300x200",
+        "images": [
+            "http://fakeimg.pl/300x200",
+            "http://fakeimg.pl/300x200",
+            "http://fakeimg.pl/300x200"
+        ],
+        "minimum_units": "10",
+        "categories": [0],
+        "comments": [
+            0,
+            1
+        ],
+        "reviews": [
+            1,
+            2
+        ]
+        
+    }
+]

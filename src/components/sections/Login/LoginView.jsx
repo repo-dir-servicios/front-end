@@ -1,6 +1,9 @@
+import React from 'react'
+
+import renderFieldList from '../../../functions/renderFieldList'
+
 import styled from 'styled-components'
 
-import React from 'react'
 
 const LoginSection = styled.section`
     
@@ -21,19 +24,7 @@ const LoginView = (props) =>  {
         fields
     } = props;
 
-    const renderFields = fields.map((f,index)=>(
-        <label key={ `input_${f.name}_${index}`}>
-            <span>
-                {f.label}
-            </span>
-            <input
-                type={f.type}
-                name={f.name}
-                value={ props[f.name] }
-                onChange={e=>inputChange(f.name, e.target.value)}
-            />
-        </label>
-    ))
+    const renderFields = renderFieldList(fields,props,inputChange)
 
     return (
 
