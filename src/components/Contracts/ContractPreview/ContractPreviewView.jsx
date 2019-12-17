@@ -1,9 +1,23 @@
-import styled from 'styled-components'
-
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-import style from "./ContractPreview.scss"
+/*
+ h6 {
+  color: red;
+ }
+
+ header {
+  background-color: blue;
+ }
+*/
+const styles = {
+  h6: {
+    color: 'red'
+  },
+  headerStyle: {
+    backgroundColor: 'blue'
+  }
+};
 
 const ContractPreviewView = ({
     id,
@@ -23,9 +37,9 @@ const ContractPreviewView = ({
 
 }) => (
 
-    <article className="ContractPreview">
-            <header>
-                <h6>
+  <article className="ContractPreview" style={{ opacity: '0.5' }}>
+            <header style={styles.headerStyle}>
+                <h6 style={styles.h6}>
                     { service.name }
                 </h6>
 
@@ -33,7 +47,7 @@ const ContractPreviewView = ({
                     <span>Cliente:</span>
                     <span>
                         {
-                            !! client && 
+                            !! client &&
                             (client.first_names+" "+ client.last_names)
                         }
                     </span>
@@ -56,7 +70,7 @@ const ContractPreviewView = ({
                     </button>
                 </Link>
 
-                
+
 
                 <button onClick={()=>cancel(id)}>
                     Cancelar
