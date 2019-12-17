@@ -20,7 +20,7 @@ const ProviderDetailView = ({
 
     <article className="ProviderDetail">
         <header>
-            <h1>
+            <h1 className="Title">
                 <span>
                     { first_name }
                 </span>
