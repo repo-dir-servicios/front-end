@@ -11,7 +11,7 @@ const CategoriesSection = styled.section`
         justify-content: space-between;
         align-items: center;
         flex-flow: row wrap;
-  justify-content: space-around;
+        justify-content: space-around;
     }
     
     .cards .card {
@@ -22,7 +22,6 @@ const CategoriesSection = styled.section`
         display: flex;
         align-items: center;
         justify-content: center;
-        /* flex-direction: column; */
     }
 
     .card {
@@ -43,6 +42,7 @@ const CategoriesSection = styled.section`
     h5{
       margin-top: 0px;
       margin-bottom: 5px;
+      color: #2E818A;
     }
 
 

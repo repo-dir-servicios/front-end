@@ -11,7 +11,7 @@ class Login extends React.Component {
 
 
     state = {
-        username: "nombreusuario",
+        username: " ",
         current_state: 0,
         redirect: false
     }
