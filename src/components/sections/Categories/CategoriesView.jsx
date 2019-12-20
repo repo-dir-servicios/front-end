@@ -39,7 +39,7 @@ const CategoriesSection = styled.section`
         width: 70px;
         border-radius: 20px;
     }
-    h5{
+    h5, h1{
       margin-top: 0px;
       margin-bottom: 5px;
       color: #2E818A;
@@ -51,7 +51,8 @@ const CategoriesSection = styled.section`
 const CategoriesView = () => (
 
     <CategoriesSection className="Categories">
-        
+        <h1>Categorias</h1>
+
         <section className="cards">
             <ul>
                 <article className="card" >

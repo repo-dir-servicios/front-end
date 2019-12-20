@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import React from 'react'
 
 const RequestDetailSection = styled.section`
-    
+    article{
+        color: #2E818A;
+    }
     
 
 `

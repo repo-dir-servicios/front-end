@@ -5,6 +5,14 @@ import React from 'react'
 import { content } from "../../../data/content/register"
 
 const RegisterSection = styled.section`
+    input{
+        border-radius: 4px;
+        border-color: 2E818A;
+        box-shadow: 2px 2px 2px #C5F8E6;
+    }
+    h1{
+        color: #2E818A;
+    }
     
     
 

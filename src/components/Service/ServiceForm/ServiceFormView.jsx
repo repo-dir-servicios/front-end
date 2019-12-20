@@ -3,7 +3,10 @@ import styled from 'styled-components'
 import React from 'react'
 
 const ServiceFormSection = styled.section`
-    
+    dl>dt{
+        color: #2E818A;
+        
+    }
     
 
 `

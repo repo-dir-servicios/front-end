@@ -26,25 +26,25 @@ const Menu = () => (
     <MenuNav>
         <MenuList>
             <NavLink exact to="/">
-                home
+                Home
             </NavLink>
             <NavLink exact to="/categories">
-                categories
+                Categorias
             </NavLink>
             <NavLink exact to="/login">
-                login
+                Login
             </NavLink>
             <NavLink exact to="/providers">
-                providers
+                Proveedores
             </NavLink>
-            <NavLink exact to="/services">
-                services
-            </NavLink>
+            {/* <NavLink exact to="/services">
+                Servicios
+            </NavLink> */}
             <NavLink exact to="/profile">
-                profile
+                Perfil
             </NavLink>
             <NavLink exact to="/register">
-                register
+                Registro
             </NavLink>
         </MenuList>
     </MenuNav>

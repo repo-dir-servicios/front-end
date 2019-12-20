@@ -39,17 +39,17 @@ const ProfileView = () => (
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/>
                Eum placeat temporibus deserunt aperiam velit dolore eligendi. </p>
             
-            <h5>Experiencia</h5>
+            {/* <h5>Experiencia</h5>
 
             <p className="experience">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/>
                Quos suscipit eaque sequi neque explicabo autem rem, <br/>
                omnis praesentium minima accusamus odit voluptatum in <br/>
-               voluptatem itaque reiciendis ea quis nemo excepturi.</p>
+               voluptatem itaque reiciendis ea quis nemo excepturi.</p> */}
         </section>
 
-        <center>
+        {/* <center>
         <button>Solicitar Servicio</button>
-        </center>
+        </center> */}
 
     </ProfileSection>
 

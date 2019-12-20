@@ -29,6 +29,9 @@ const LoginSection = styled.section`
         flex-direction: column;
         padding-top: 20px;
     }
+    h1{
+        color: #2E818A;
+    }
     
 
 `

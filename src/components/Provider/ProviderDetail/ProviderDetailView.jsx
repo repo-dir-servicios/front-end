@@ -5,9 +5,9 @@ import styled from 'styled-components'
 
 
 const ProviderDetailSection = styled.section`
-    
-    
-
+    header{
+        background-color: black;
+    }
 `
 
 const ProviderDetailView = ({
@@ -19,7 +19,7 @@ const ProviderDetailView = ({
 }) => (
 
     <article className="ProviderDetail">
-        <header>
+        <header className="prov">
             <h1 className="Title">
                 <span>
                     { first_name }
