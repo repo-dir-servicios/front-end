@@ -31,9 +31,9 @@ const Menu = () => (
             <NavLink exact to="/categories">
                 Categorias
             </NavLink>
-            <NavLink exact to="/login">
+            {/* <NavLink exact to="/login">
                 Login
-            </NavLink>
+            </NavLink> */}
             <NavLink exact to="/providers">
                 Proveedores
             </NavLink>
